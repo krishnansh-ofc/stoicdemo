@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary meta tags -->
+  <title>STOIC STORE</title>
+  <meta name="title" content="STOIC STORE - Digital Products for Entrepreneurs">
+  <meta name="description" content="Premium digital products to help you build and grow your business">
+  <script src="https://kit.fontawesome.com/8f70d9a32d.js" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/1.png" type="image">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom css link -->
+  <link rel="stylesheet" href="store.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Preload images -->
+  <link rel="preload" as="image" href="./images/1.png" imagesrcset="">
+  <link rel="preload" as="image" href="./images/1.png">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#home" class="logo">
+          <img src="./images/hero-banner.jpg" width="40" height="40" alt="STOIC home">
+        </a>
+
+        <!-- User Menu -->
+        <div class="user-menu" id="userMenu" style="display: none;">
+          <div class="avatar-placeholder" id="userAvatar">
+            <span id="avatarInitials"></span>
+          </div>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#" id="editProfile">Edit Profile</a>
+            <a href="#" id="logout">Logout</a>
+          </div>
+        </div>
+
+        <!-- Cart Icon -->
+        <div class="cart-icon" id="cartIcon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+
+        <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="index.html#service" class="navbar-link">Services</a></li>
+            <li><a href="index.html#subscription" class="navbar-link">Subscription</a></li>
+            <li><a href="index.html#portfolio" class="navbar-link">Stories</a></li>
+            <li><a href="index.html#contact" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- Hero Section -->
+        <section class="section hero store-hero" id="home" aria-label="store">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="h1 hero-title">STOIC STORE</h1>
+              <p class="hero-subtitle">
+                Innovate. Create. Dominate.
+              </p>
+              <p class="section-text">
+                Premium digital products to help you build, grow, and scale your business with cutting-edge strategies.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="store-tools">
+          <div class="container">
+            <div class="search-filter-container">
+              <!-- Search Button (Mobile) -->
+              <button class="search-toggle-btn" id="mobileSearchToggle">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+              
+              <!-- Search Bar -->
+              <div class="search-container" id="searchContainer">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button class="search-btn" id="searchBtn">
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </div>
+              
+              <!-- Filter Dropdown -->
+              <div class="filter-container">
+                <button class="filter-btn" id="filterBtn">
+                  <span>Filter</span>
+                  <ion-icon name="filter-outline"></ion-icon>
+                </button>
+                <div class="filter-dropdown" id="filterDropdown">
+                  <div class="filter-option">
+                    <input type="checkbox" id="filter-all" checked>
+                    <label for="filter-all">All Products</label>
+                  </div>
+                  <div class="filter-option">
+                    <input type="checkbox" id="filter-guides">
+                    <label for="filter-guides">Guides & Templates</label>
+                  </div>
+                  <div class="filter-option">
+                    <input type="checkbox" id="filter-tools">
+                    <label for="filter-tools">Tools & Resources</label>
+                  </div>
+                  <div class="filter-option">
+                    <input type="checkbox" id="filter-courses">
+                    <label for="filter-courses">Courses</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="store-products">
+          <div class="container">
+            <div class="products-grid">
+              <!-- Product 1 -->
+              <div class="product-card" data-id="product1" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/linkedinpowerunlock.png" alt="Business Growth Playbook">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Unlock the Power of LinkedIn</h3>
+                  <p class="product-price">₹00.00</p>
+                  <p class="product-description">Your Hands-on Guide to Social Selling.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn" data-pdf="./resources/Unlock_The_Power_Of_LinkedIn.pdf">Buy Now</button>
+                    <button class="btn cart-btn" data-pdf="./resources/Unlock_The_Power_Of_LinkedIn.pdf">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 2 -->
+              <div class="product-card" data-id="product2" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/stoic6.png" alt="AI Marketing Toolkit">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">The STOIC 6</h3>
+                  <p class="product-price">₹00.00</p>
+                  <p class="product-description">Framework For Your Startup Empire</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 3 -->
+              <div class="product-card" data-id="product3" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="Pitch Deck Template">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Pitch Deck Template</h3>
+                  <p class="product-price">₹29.99</p>
+                  <p class="product-description">Investor-ready pitch deck template with 50+ slides.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 4 -->
+              <div class="product-card" data-id="product4" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="Financial Model Template">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Financial Model Template</h3>
+                  <p class="product-price">₹59.99</p>
+                  <p class="product-description">Complete financial model for startups and growing businesses.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 5 -->
+              <div class="product-card" data-id="product5" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="Productivity Masterclass">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Productivity Masterclass</h3>
+                  <p class="product-price">₹79.99</p>
+                  <p class="product-description">6-week course to 10x your productivity as an entrepreneur.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 6 -->
+              <div class="product-card" data-id="product6" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="UX Design System">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">UX Design System</h3>
+                  <p class="product-price">₹49.99</p>
+                  <p class="product-description">Complete design system for digital products and websites.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 7 -->
+              <div class="product-card" data-id="product7" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="Content Strategy Guide">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Content Strategy Guide</h3>
+                  <p class="product-price">₹34.99</p>
+                  <p class="product-description">Build a content machine that drives traffic and conversions.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 8 -->
+              <div class="product-card" data-id="product8" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="No-Code Automation">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">No-Code Automation</h3>
+                  <p class="product-price">₹44.99</p>
+                  <p class="product-description">Automate your business without writing a single line of code.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Product 9 -->
+              <div class="product-card" data-id="product9" data-genre="Guide">
+                <div class="product-image">
+                  <img src="./images/2.png" alt="Founder's Journal">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Founder's Journal</h3>
+                  <p class="product-price">₹24.99</p>
+                  <p class="product-description">Daily prompts and exercises for strategic thinking.</p>
+                  <div class="product-actions">
+                    <button class="btn buy-btn">Buy Now</button>
+                    <button class="btn cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="view-all-container">
+              <button class="btn view-all-btn">
+                <span class="span">View All Products</span>
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Get in touch</p>
+          </li>
+          <li>
+            <a href="mailto:akshatb142@gmail.com" class="footer-link">akshatb142@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Locations</p>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/place/Bhiwani" class="footer-link" target="_blank">Bhiwani — India</a>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Shopping Cart Modal -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-container">
+      <button class="close-cart" id="closeCart">&times;</button>
+      <h3>Your Cart</h3>
+      
+      <div class="cart-items" id="cartItems">
+        <!-- Cart items will be dynamically inserted here -->
+        <div class="empty-cart-message">
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+      
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span class="total-amount" id="cartTotal">₹0.00</span>
+        </div>
+        <button class="btn checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Landing Page -->
+<div id="productLandingPage" class="plp-wrapper">
+  <div class="plp-container">
+    <button id="plpClose" class="plp-close">&times;</button>
+    <div class="plp-content">
+      <div class="plp-image-container">
+        <img id="plpImage" src="" alt="" class="plp-image">
+      </div>
+      <div class="plp-details">
+        <h2 id="plpTitle" class="plp-title"></h2>
+        <span id="plpGenre" class="plp-genre"></span>
+        <p id="plpDescription" class="plp-description"></p>
+        <button id="plpBuyBtn" class="plp-buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+
+  <!-- Custom js link -->
+  <script type="module" src="./script.js"></script>
+  <script src="./store.js"></script>
+
+  <!-- Ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

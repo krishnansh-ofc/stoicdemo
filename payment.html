@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Payment | STOIC STORE</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/1.png" type="image">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/8f70d9a32d.js" crossorigin="anonymous"></script>
+
+  <!-- Custom css link -->
+  <link rel="stylesheet" href="store.css">
+  <link rel="stylesheet" href="payment.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lottie for animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body class="payment-page">
+  <!-- Preloader -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="./images/hero-banner.jpg" width="40" height="40" alt="STOIC home">
+        </a>
+
+        <div class="cart-icon" id="cartIcon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+
+        <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link">Home</a></li>
+            <li><a href="index.html#service" class="navbar-link">Services</a></li>
+            <li><a href="index.html#subscription" class="navbar-link">Subscription</a></li>
+            <li><a href="index.html#portfolio" class="navbar-link">Stories</a></li>
+            <li><a href="index.html#contact" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+    </header>
+
+    <main class="payment-main">
+      <div class="container">
+        <h1 class="payment-header-title">
+          <a href="store.html" class="back-arrow" style="margin-right: 10px;">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </a>
+          Complete Your Payment
+        </h1>
+        <p class="section-text" style="margin-left: 20px; margin-bottom: 30px;">Secure checkout powered by UPI & instant delivery</p>
+
+        <div class="payment-flow">
+          <!-- Payment Steps -->
+          <div class="payment-steps">
+            <div class="step active">
+              <span>1</span>
+              Cart
+            </div>
+            <div class="step active">
+              <span>2</span>
+              Details
+            </div>
+            <div class="step">
+              <span>3</span>
+              Payment
+            </div>
+            <div class="step">
+              <span>4</span>
+              Complete
+            </div>
+          </div>
+
+          <!-- Payment Grid -->
+          <div class="payment-grid">
+            <!-- Order Summary -->
+            <div class="payment-summary">
+              <h2>
+                <ion-icon name="receipt-outline"></ion-icon>
+                Order Summary
+              </h2>
+              
+              <div class="payment-products" id="paymentProducts">
+                <!-- Products will be dynamically inserted here -->
+              </div>
+              
+              <div class="coupon-group">
+                <input type="text" id="couponCode" placeholder="Coupon code">
+                <button class="btn" id="applyCoupon">Apply</button>
+              </div>
+              
+              <div class="payment-total">
+                <span>Total:</span>
+                <span class="total-amount" id="paymentTotal">₹0.00</span>
+              </div>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="payment-details">
+              <h2>
+                <ion-icon name="card-outline"></ion-icon>
+                Payment Details
+              </h2>
+              
+              <form id="paymentForm">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="deliveryEmail">Delivery Email (for digital products)</label>
+                  <input type="email" id="deliveryEmail" required>
+                </div>
+                
+                <h3 style="margin: 25px 0 15px; color: var(--white);">Payment Method</h3>
+                
+                <div class="method-tabs">
+                  <div class="method-tab active" data-method="upi">
+                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                    UPI
+                  </div>
+                  <div class="method-tab" data-method="card">
+                    <ion-icon name="card-outline"></ion-icon>
+                    Card
+                  </div>
+                  <div class="method-tab" data-method="paypal">
+                    <ion-icon name="logo-paypal"></ion-icon>
+                    PayPal
+                  </div>
+                </div>
+                
+                <!-- UPI Payment Method -->
+                <div class="method-content active" data-method="upi">
+                  <div class="upi-info">
+                    <p>Scan the QR code or use UPI ID below</p>
+                    <div class="upi-qr">
+                      <img id="upiQrCode" src="./images/upi-qr-placeholder.png" alt="UPI QR Code">
+                    </div>
+                    <div class="upi-id">
+                      <span id="upiId">stoicstore@upi</span>
+                      <button class="copy-btn" id="copyUpiId">
+                        <ion-icon name="copy-outline"></ion-icon>
+                        Copy
+                      </button>
+                    </div>
+                    <p style="margin-top: 20px; font-size: var(--fs-8); color: var(--roman-silver);">
+                      After payment, click "Verify Payment" below
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Card Payment Method -->
+                <div class="method-content" data-method="card">
+                  <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="cardExpiry">Expiry Date</label>
+                      <input type="text" id="cardExpiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                      <label for="cardCvc">CVC</label>
+                      <input type="text" id="cardCvc" placeholder="123">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="cardName">Name on Card</label>
+                    <input type="text" id="cardName">
+                  </div>
+                </div>
+                
+                <!-- PayPal Payment Method -->
+                <div class="method-content" data-method="paypal">
+                  <div class="paypal-info">
+                    <p>You'll be redirected to PayPal to complete your payment</p>
+                    <button class="btn paypal-btn" id="paypalBtn">
+                      <ion-icon name="logo-paypal"></ion-icon>
+                      Pay with PayPal
+                    </button>
+                  </div>
+                </div>
+                
+                <button type="submit" class="payment-btn" id="submitPayment">
+                  <span id="paymentBtnText">Pay Now</span>
+                  <span id="paymentAmount">₹0.00</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" style="background-color: var(--raisin-black); padding: 60px 0;">
+      <div class="container">
+        <h2 class="h2" style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Where is my product?
+            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+          </button>
+          <div class="faq-answer">
+            <p>Your digital product will be delivered instantly to the email address you provided after payment verification. You'll also receive a download link on this page.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Didn't receive email?
+            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+          </button>
+          <div class="faq-answer">
+            <p>Please check your spam folder. If you still can't find it, contact us at support@stoicstore.com with your order details.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            What's your refund policy?
+            <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+          </button>
+          <div class="faq-answer">
+            <p>Due to the digital nature of our products, we offer refunds within 7 days if you're unsatisfied with your purchase. Contact us to initiate a refund.</p>
+          </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: 40px;">
+          <button class="btn" id="helpBtn">
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+            Need Help? Chat with us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Get in touch</p>
+          </li>
+          <li>
+            <a href="mailto:akshatb142@gmail.com" class="footer-link">akshatb142@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Locations</p>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/place/Bhiwani" class="footer-link" target="_blank">Bhiwani — India</a>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Payment Success Modal -->
+  <div class="payment-modal" id="paymentModal">
+    <div class="payment-modal-container">
+      <div class="payment-success">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_xlkxtmul.json" background="transparent" speed="1" style="width: 150px; height: 150px;" autoplay></lottie-player>
+        <h2>Payment Successful!</h2>
+        <p>Your order has been processed successfully.</p>
+        
+        <div class="download-section">
+          <button class="btn download-btn" id="downloadBtn">
+            <ion-icon name="download-outline"></ion-icon>
+            Download Your Product
+          </button>
+          <p class="email-notice">We've also sent a copy to your email.</p>
+        </div>
+        
+        <div class="order-details">
+          <h4>Order Details</h4>
+          <p id="orderId">Order ID: #STOIC-<span id="orderIdNumber"></span></p>
+          <p id="orderDate">Date: <span id="orderDateValue"></span></p>
+          <p id="orderAmount">Amount: <span id="orderAmountValue"></span></p>
+        </div>
+        
+        <button class="btn back-to-store" id="backToStore">
+          Back to Store
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+  <!-- Custom js link -->
+  <script type="module" src="./script.js"></script>
+  <script src="./payment.js"></script>
+
+  <!-- Ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

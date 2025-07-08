@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>STOIC</title>
+  <meta name="title" content="Akshat Bhardwaj - Web Developer">
+  <meta name="description" content="This is a personal portfolio of Akshat Bhardwaj">
+  <script src="https://kit.fontawesome.com/8f70d9a32d.js" crossorigin="anonymous"></script>
+
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/1.png" type="image">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./images/1.png" imagesrcset="">
+  <link rel="preload" as="image" href="./images/1.png">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+  <!--- #HEADER --->
+
+<header class="header" data-header>
+  <div class="container">
+
+    <a href="#home" class="logo">
+      <img src="./images/hero-banner.jpg" width="40" height="40" alt="STOIC home">
+    </a>
+
+    <!-- Add this inside the header, after the navbar -->
+<div class="user-menu" id="userMenu" style="display: none;">
+  <div class="avatar-placeholder" id="userAvatar">
+    <span id="avatarInitials"></span>
+  </div>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="#" id="editProfile">Edit Profile</a>
+    <a href="#" id="logout">Logout</a>
+  </div>
+</div>
+
+    <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+      <span class="line line-1"></span>
+      <span class="line line-2"></span>
+    </button>
+
+    <nav class="navbar" data-navbar>
+      <ul class="navbar-list">
+
+        <li>
+          <a href="#home" class="navbar-link">Home</a>
+        </li>
+
+        <li>
+          <a href="#service" class="navbar-link">Services</a>
+        </li>
+
+        <li>
+          <a href="#subscription" class="navbar-link">Subscription</a>
+        </li>
+
+        <li>
+          <a href="#portfolio" class="navbar-link">Stories</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="navbar-link">Contact</a>
+        </li>
+
+        <li>
+          <a href="store.html" class="navbar-link">Store</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="overlay" data-nav-toggler data-overlay></div>
+
+  </div>
+</header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">STOIC</h1>
+
+            <p class="hero-subtitle">
+              Innovation. Futurist. Maverick. Next-Gen.
+            </p>
+
+            <div class="hero-banner">
+              <img src="./images/lo.png" width="800" height="800" alt="stoic" class="w-100">
+            </div>
+
+            <p class="section-text">
+              STOIC aims to revolutionize the startup ecosystem by empowering founders with AI-driven insights, digital products, and a thriving community. We simplify growth, enhance innovation, and provide resources to turn visionary ideas into successful, scalable businesses.
+            </p>
+
+            <a href="./store.html" class="btn has-before">
+              <span class="span">Explore!</span>
+
+              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="service" id="service" aria-labelledby="service-label">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <p class="section-subtitle">
+                Services That we Provide
+              </p>
+
+              <h2 class="h2 section-title" id="service-label">Services</h2>
+            </div>
+
+            <p class="section-text">
+              STOIC offers tiered access to digital products, AI-driven business insights, and exclusive startup resources. From free guides and community access to advanced AI tools, market research, and premium networking, we empower founders with the strategies, tools, and connections for success.
+              <br>
+              <br>
+
+              Explore our services below and discover how I can we help you in unlocking new opportunities, scale, and shaping the future of your business.
+            </p>
+
+          </div>
+
+          <div class="slider" data-slider>
+
+            <ul class="slider-container service-list" data-slider-container>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="desktop-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Digital Resources</h3>
+
+                  <p class="card-text">
+                    High-quality eBooks, cheat-sheets, exercises, Case Studies & Reports, AI-driven insights and much more. STOIC equips entrepreneurs with essential tools for business growth, innovation, and strategic decision-making in the fast-evolving digital landscape.
+                  </p>
+
+                  <span class="text-lg card-number">01</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my website design service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="podium-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Research</h3>
+
+                  <p class="card-text">
+                    We deliver in-depth research to empower you with data-driven decision-making. Our reports cover emerging market trends and competitor analysis. We equip founders with actionable intelligence to grab opportunities and mitigate risks.
+                  </p>
+
+                  <span class="text-lg card-number">02</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my SEO Marketing service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="basket-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Stategy and Tactics</h3>
+
+                  <p class="card-text">
+                    For smart moves, cutting-edge strategies and tactics to help you build, grow, and scale your startup. From market positioning and business development to growth hacking and market advantage and empower founders with proven frameworks.
+                  </p>
+
+                  <span class="text-lg card-number">03</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my eCommerce service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="color-filter-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Events</h3>
+
+                  <p class="card-text">
+                    STOIC hosts digital events, including expert-led advices, AI-driven workshops, and interactive Q&A sessions, providing entrepreneurs with logical, competitve and to study analytical scenarios and stay ahead in the evolving business world.
+                  </p>
+
+                  <span class="text-lg card-number">04</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my Graphic Design service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="megaphone-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Contests</h3>
+
+                  <p class="card-text">
+                    STOIC hosts startup contests where entrepreneurs pitch ideas, solve challenges, and gain exposure. Winners receive resources and rewards, fostering critical approach, strategic genre, and gamify experience in a competitive environment.  
+                  </p>
+
+                  <span class="text-lg card-number">05</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my Digital Marketing service"></a>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                  </div>
+
+                  <h3 class="h3 card-title">Community</h3>
+
+                  <p class="card-text">
+                    STOIC fosters a dynamic community where entrepreneurs, futurist and innovators connect and collaborate. Through shared thoughts, experiences and oriented discussions, we empower members to exchange ideas, gain valuable knowledge, and build ventures in an ecosystem.
+                  </p>
+
+                  <span class="text-lg card-number">06</span>
+
+                  <a href="#" class="layer-link" aria-label="More about my Social Media service"></a>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <div class="slider-controls">
+              <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+
+              <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+<!-- Subscription Section -->
+<section class="subscription" id="subscription" aria-labelledby="subscription-label">
+  <div class="container">
+    <div class="title-wrapper">
+      <div>
+        <p class="section-subtitle">Choose Your Plan</p>
+        <h2 class="h2 section-title" id="subscription-label">Subscription Plans</h2>
+      </div>
+      <p class="section-text">
+        Select the perfect plan that suits your needs. From basic resources to premium features, 
+        we offer flexible options to support your journey at every stage.
+      </p>
+    </div>
+
+    <div class="plans-container">
+      <!-- Free Plan -->
+      <div class="plan-card">
+        <h3 class="h3 card-title">Free</h3>
+        
+        <ul class="plan-features">
+          <li>- Access to Free Digital Products (Limited guides, templates, and cheat sheets)</li>
+          <li>- Newsletter Subscription (Weekly startup & AI insights)</li>
+          <li>- Community access</li>
+          <li>- Limited Blog Access (Read free startup and AI articles)</li>
+          <li>- Basic Business Idea Validation (Automated AI feedback)</li>
+          <li>- Limited Free AI Prompts (For business growth, marketing, etc.)</li>
+        </ul>
+        
+        <a href="payment.html?plan=Free" class="btn has-before">
+          <span class="span">Access</span>
+          <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+      
+      <!-- Standard Plan -->
+      <div class="plan-card featured">
+        <h3 class="h3 card-title">Standard</h3>
+        
+        <ul class="plan-features">
+          <li>- Everything in Free Plan</li>
+          <li>- Exclusive Digital Products</li>
+          <li>- Advanced AI Tool Lists & Hacks (Startup-focused AI workflows)</li>
+          <li>- Access to Business Case Studies & Market Insights</li>
+          <li>- Personalized Business Idea Review (Monthly AI-powered report)</li>
+          <li>- Early Access to New AI & Startup Trends</li>
+          <li>- Exclusive Discounts on STOIC Paid Products</li>
+        </ul>
+        
+        <a href="payment.html?plan=Standard" class="btn has-before">
+          <span class="span">Access</span>
+          <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+      
+      <!-- Premium Plan -->
+      <div class="plan-card">
+        <h3 class="h3 card-title">Premium</h3>
+        
+        <ul class="plan-features">
+          <li>- Everything in Standard Plan</li>
+          <li>- AI-Generated Business Models & Go-To-Market Strategy</li>
+          <li>- Exclusive Founder's Mastermind Group</li>
+          <li>- Access to Exclusive AI & Business Reports</li>
+          <li>- Premium Business Networking</li>
+          <li>- Early Access to New Features & Tools</li>
+          <li>- Lifetime Discount on All STOIC Products</li>
+        </ul>
+        
+        <a href="payment.html?plan=Premium" class="btn has-before access-btn" data-plan="Premium">
+          <span class="span">Access</span>
+          <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section class="portfolio" id="portfolio" aria-labelledby="portfolio-label">
+
+        <div class="title-wrapper container">
+
+          <div>
+            <p class="section-subtitle" id="portfolio-label">Our Stories</p>
+
+            <h2 class="h2 section-title">Stories</h2>
+          </div>
+
+          <p class="section-text">
+            STOIC highlights the success stories of entrepreneurs, their challenges, breakthroughs, and bold decisions that shaped their moves. Discover tales of resilience, innovation, and fearless execution that inspire and empower the startup community.
+          </p>
+
+        </div>
+
+        <div class="slider" data-slider>
+
+          <ul class="slider-container" data-slider-container>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./images/portfolio-1.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Innovation</h3>
+
+                  <p class="card-text">Product Innovation</p>
+                </div>
+
+                <a href="https://stoic.com" class="layer-link"></a>
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./images/portfolio-2.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Insights</h3>
+
+                  <p class="card-text">Business And Market Research</p>
+                </div>
+
+                <a href="https://aer.com" class="layer-link"></a>
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./images/portfolio-3.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Web Development</h3>
+
+                  <p class="card-text">UX/UI Design</p>
+                </div>
+
+                <a href="error.html" class="layer-link"></a>
+
+              </div>
+            </li>
+
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600;">
+
+                <img src="./images/portfolio-6.jpg" width="600" height="600" loading="lazy" alt="portfolio"
+                  class="img-cover">
+
+                <div class="card-content">
+                  <h3 class="h3 card-title">Analysis And Tactics</h3>
+
+                  <p class="card-text">Strategy and analytics expert</p>
+                </div>
+
+                <a href="https://monies.com" class="layer-link"></a>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <div class="slider-controls">
+            <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+
+            <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- 
+        - #GET IN TOUCH
+      
+      -->
+      <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We're here to help you on your every step of building an empire. Reach out to us with your questions or concerns.</p>
+            </div>
+    
+            <!-- ✅ Correctly structured form with Formspark -->
+            <form class="contact-form" id="contactForm" action="https://submit-form.com/g5kyBSFDN" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Name" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" required placeholder="Phone Number" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+                <p id="responseMessage" style="display: none;"></p>
+            </form>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Replace the footer in index.html with this -->
+<footer class="footer">
+  <div class="container">
+    <ul class="footer-list">
+      <li>
+        <p class="h4 footer-list-title">Get in touch</p>
+      </li>
+      <li>
+        <a href="mailto:akshatb142@gmail.com" class="footer-link">akshatb142@gmail.com</a>
+      </li>
+    </ul>
+
+    <ul class="footer-list">
+      <li>
+        <p class="h4 footer-list-title">Locations</p>
+      </li>
+      <li>
+        <a href="https://www.google.com/maps/place/Bhiwani" class="footer-link" target="_blank">Bhiwani — India</a>
+      </li>
+    </ul>
+
+    <ul class="social-list">
+      <li>
+        <a href="#" class="social-link" target="_blank">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="social-link">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="social-link" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="social-link" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+<!-- Authentication Modal -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-container">
+    <button class="close-auth" id="closeAuth">&times;</button>
+    
+    <!-- Sign In Form -->
+    <div class="auth-form" id="signInForm">
+      <h3>Welcome Back</h3>
+      <form id="signIn">
+        <div class="form-group">
+          <input type="email" id="loginEmail" required placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" required placeholder="Password">
+        </div>
+        <button type="submit" class="submit-button">Sign In</button>
+      </form>
+      
+      <!-- Forgot Password Link -->
+      <p class="forgot-password">
+        <a href="#" id="forgotPassword">Forgot password?</a>
+      </p>
+      
+      <p class="auth-toggle">
+        Don't have an account? <a href="#" id="showSignUp">Sign Up</a>
+      </p>
+      <p class="auth-message" id="signInMessage"></p>
+    </div>
+    
+    <!-- Sign Up Form -->
+    <div class="auth-form" id="signUpForm" style="display: none;">
+      <h3>Get Started</h3>
+      <form id="signUp">
+        <div class="form-group">
+          <input type="text" id="signupName" required placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <input type="email" id="signupEmail" required placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="password" id="signupPassword" required placeholder="Password (min 6 characters)">
+        </div>
+        <div class="form-group">
+          <input type="password" id="signupConfirm" required placeholder="Confirm Password">
+        </div>
+        <button type="submit" class="submit-button">Create Account</button>
+      </form>
+      
+      <p class="auth-toggle">
+        Already have an account? <a href="#" id="showSignIn">Sign In</a>
+      </p>
+      <p class="auth-message" id="signUpMessage"></p>
+    </div>
+  </div>
+</div>
+
+<!--- Profile Edit Modal --->
+<div class="profile-modal" id="profileModal">
+  <div class="profile-container">
+    <button class="close-profile" id="closeProfile">&times;</button>
+    <h3>Edit Profile</h3>
+    <form id="profileForm">
+      <div class="form-group">
+        <input type="text" id="profileName" required placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <input type="email" id="profileEmail" required placeholder="Email" disabled>
+      </div>
+      <div class="form-group">
+        <input type="password" id="profilePassword" placeholder="New Password (leave blank to keep current)">
+      </div>
+      <div class="form-group">
+        <input type="password" id="profileConfirm" placeholder="Confirm New Password">
+      </div>
+      <button type="submit" class="submit-button">Save Changes</button>
+    </form>
+    <p class="auth-message" id="profileMessage"></p>
+  </div>
+</div>
+
+<!-- Free PDF Modal -->
+<div class="pdf-modal" id="pdfModal">
+  <div class="pdf-container">
+    <button class="close-pdf" id="closePdf">&times;</button>
+    <h3>Thank you for signing up!</h3>
+    <p>As a welcome gift, here's a free PDF to help you get started:</p>
+    <a href="./resources/The_STOIC_6 _Framework_For_Your_Startup_Empire.pdf" class="btn has-before" download>
+      <span class="span">Download Free PDF</span>
+      <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+    </a>
+  </div>
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <!-- 
+    - custom js link
+  -->
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script type="module" src="./script.js"></script>
+
+</body>
+
+</html>
